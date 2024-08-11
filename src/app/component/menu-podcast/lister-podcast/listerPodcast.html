@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12" style="justify-content: center; text-align: center">
+      <h5>Liste des podcasts disponibles</h5>
+      @if (podcasts.length === 0) {
+        <p>Aucun podcast pour le moment</p>
+      }
+    </div>
+    @for (podcast of podcasts; track podcast) {
+      <div class="col-md-12 col-sm-12 col-3">
+        <button data-test="list-item-podcast" class="btn btn-secondary" (click)="allerSurLePodcast(podcast.titre)">{{podcast.titre}}</button>
+      </div>
+    }
+  </div>
+</div>

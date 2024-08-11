@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12" style="justify-content: center; text-align: center">
+      <h5 data-test="detail-podcast-titre">Episodes du podcast : {{ podcast?.titre }}</h5>
+      @if (podcast && podcast.episodes.length === 0) {
+        <p>Aucun épisode pour le moment</p>
+      }
+    </div>
+    @for (episode of podcast?.episodes; track episode) {
+      <div class="col-md-12 col-sm-12 col-3">
+        <button data-test="list-item-podcast" class="btn btn-info">{{episode.titre}}</button>
+      </div>
+    }
+  </div>
+</div>
+

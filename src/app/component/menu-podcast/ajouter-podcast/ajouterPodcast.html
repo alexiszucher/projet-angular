@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 data-test="ajouter-podcast-titre" class="card-title">Ajouter un podcast</h5>
+          <div class="row">
+            <div class="col-8">
+              <input type="text" id="ajouter-podcast-titre" class="form-control"
+                     data-test="input-nom-podcast-a-ajouter" [(ngModel)]="titrePodcast" name="ajouter-podcast-titre" placeholder="Titre du podcast">
+            </div>
+            <div class="col-4">
+              <button data-test="bouton-ajouter-podcast" class="btn btn-primary" (click)="ajouterPodcast()"><add-icon></add-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
