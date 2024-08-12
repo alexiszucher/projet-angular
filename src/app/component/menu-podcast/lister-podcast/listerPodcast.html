@@ -7,7 +7,7 @@
       }
     </div>
     @for (podcast of podcasts; track podcast) {
-      <div class="col-md-12 col-sm-12 col-3">
+      <div class="col-lg-3 col-md-12 col-sm-12 col-3">
         <button data-test="list-item-podcast" class="btn btn-secondary" (click)="allerSurLePodcast(podcast.titre)">{{podcast.titre}}</button>
       </div>
     }
