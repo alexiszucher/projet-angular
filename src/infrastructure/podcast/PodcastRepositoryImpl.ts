@@ -1,6 +1,5 @@
 import PodcastRepository from "../../domain/podcast/PodcastRepository";
 import Podcast from "../../domain/podcast/Podcast";
-import InMemoryPodcast from "../InMemoryPodcast";
 import Database from "../Database";
 
 export default class PodcastRepositoryImpl implements PodcastRepository {
@@ -11,21 +10,21 @@ export default class PodcastRepositoryImpl implements PodcastRepository {
   }
 
   ajouter(podcast: Podcast): void {
-    this.database.podcasts().push(podcast);
+    this.database.getPodcasts().push(podcast);
   }
 
   lister(): Podcast[] {
-    return this.database.podcasts();
+    return this.database.getPodcasts();
   }
 
   trouver(titrePodcast: string): Podcast | undefined {
-    return this.database.podcasts().find((podcast: Podcast) => podcast.titre === titrePodcast);
+    return this.database.getPodcasts().find((podcast: Podcast) => podcast.titre === titrePodcast);
   }
 
   mettreAJour(podcast: Podcast): void {
-    let index: number = this.database.podcasts().findIndex((p: Podcast) => p.titre === podcast.titre);
+    let index: number = this.database.getPodcasts().findIndex((p: Podcast) => p.titre === podcast.titre);
     if (index !== -1) {
-      this.database.podcasts()[index] = podcast;
+      this.database.getPodcasts()[index] = podcast;
     }
   }
 }

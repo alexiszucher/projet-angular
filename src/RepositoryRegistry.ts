@@ -1,10 +1,11 @@
 import PodcastRepository from "./domain/podcast/PodcastRepository";
 import PodcastRepositoryImpl from "./infrastructure/podcast/PodcastRepositoryImpl";
-import InMemoryPodcast from "./infrastructure/InMemoryPodcast";
+import InMemoryPodcastDatabase from "./infrastructure/InMemoryPodcastDatabase";
+import Database from "./infrastructure/Database";
 
 export default class RepositoryRegistry {
-  static database() {
-    return new InMemoryPodcast();
+  static database(): Database {
+    return InMemoryPodcastDatabase.getInstance();
   }
 
   static podcastRepository(): PodcastRepository {
