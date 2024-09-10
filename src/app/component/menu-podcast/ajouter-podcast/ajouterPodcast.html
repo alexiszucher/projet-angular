@@ -7,10 +7,10 @@
           <div class="row">
             <div class="col-8">
               <input type="text" id="ajouter-podcast-titre" class="form-control"
-                     data-test="input-nom-podcast-a-ajouter" [(ngModel)]="titrePodcast" name="ajouter-podcast-titre" placeholder="Titre du podcast">
+                     data-test="input-nom-podcast-a-ajouter" [(ngModel)]="applicatif.titrePodcast" name="ajouter-podcast-titre" placeholder="Titre du podcast">
             </div>
             <div class="col-4">
-              <button data-test="bouton-ajouter-podcast" class="btn btn-primary" (click)="ajouterPodcast()"><add-icon></add-icon></button>
+              <button data-test="bouton-ajouter-podcast" class="btn btn-primary" (click)="applicatif.ajouterPodcast()"><add-icon></add-icon></button>
             </div>
           </div>
         </div>

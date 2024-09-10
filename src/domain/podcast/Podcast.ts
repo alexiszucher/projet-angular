@@ -20,4 +20,11 @@ export default class Podcast {
   ajouterEpisode(episode: Episode): void {
     this._episodes.push(episode);
   }
+
+  mettreAJourEpisode(episode: Episode): void {
+    let index: number = this.episodes.findIndex((ep: Episode) => ep.titre === episode.titre);
+    if (index !== -1) {
+      this._episodes[index] = episode;
+    }
+  }
 }
